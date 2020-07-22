@@ -1,5 +1,5 @@
 import { GluegunCommand } from 'gluegun';
-import { getNumericalValues } from '../util/numericals'
+import { extractNumberInAText } from '../util/numericals'
 import { numbersToWords} from 'numbers-to-words-lib'
 
 const command: GluegunCommand = {
@@ -14,7 +14,7 @@ const command: GluegunCommand = {
       const lines = getLines(file).filter(line=>line);
       lines.forEach(line=> {
         try {
-          const numberInLine = getNumericalValues(line);
+          const numberInLine = extractNumberInAText(line);
           print.info(numbersToWords(numberInLine,language));
         } catch (error) {
           print.info(error.message)
