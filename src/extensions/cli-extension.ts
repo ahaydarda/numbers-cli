@@ -1,12 +1,20 @@
 
 import { GluegunToolbox } from 'gluegun'
+const fs = require('fs');
 
-  
 // add your CLI-specific functionality here, which will then be accessible
 // to your commands
 module.exports = (toolbox: GluegunToolbox) => {
-  toolbox.foo = () => {
-    toolbox.print.info('called foo extension')
+  toolbox.getLines = (path) => {
+    try {
+      // read contents of the file
+      const data = fs.readFileSync(path, 'UTF-8');
+      // split the contents by new line
+      const lines = data.split(/\r?\n/);
+      return lines;
+    } catch (err) {
+      toolbox.print.error(err);
+    }
   }
 
   // enable this if you want to read configuration in from

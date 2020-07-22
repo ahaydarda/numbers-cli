@@ -409,6 +409,11 @@
   dependencies:
     jest-diff "^24.3.0"
 
+"@types/lodash@^4.14.157":
+  version "4.14.157"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.157.tgz#fdac1c52448861dfde1a2e1515dbc46e54926dc8"
+  integrity sha512-Ft5BNFmv2pHDgxV5JDsndOWTRJ+56zte0ZpYLowp03tW+K+t8u8YMOzAnpuqPgzX6WO1XpDIUm7u04M8vdDiVQ==
+
 "@types/node@^12.7.11":
   version "12.12.51"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.51.tgz#446a67af8c5ff98947d7cef296484c6ad47ddb16"
@@ -2720,10 +2725,13 @@ npm-run-path@^4.0.0:
   dependencies:
     path-key "^3.0.0"
 
-numbers-to-words-lib@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/numbers-to-words-lib/-/numbers-to-words-lib-0.1.0.tgz#4ba07087027eba361906627d0b20a5bee6afaac7"
-  integrity sha512-02jH/9nkAvJiVNKTlj8DOSw06IkfVCXFTjQSBUSpkmFC2mhqC4vnryJjSol4CX+FHxBJgW1PxVh7LVfgaUmPTA==
+numbers-to-words-lib@^0.1.1s:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/numbers-to-words-lib/-/numbers-to-words-lib-0.1.1.tgz#2522e73f007c67ae90a4c720705650417e7a2c75"
+  integrity sha512-XNDvpDtYfN4HsY3V6g/2c3WxdfHXMgmcMk4sJJ3dSInJQMLGwiI8yvJTnjrdqVEtmAw3tcmMobpuFIUqJB9cyg==
+  dependencies:
+    "@types/lodash" "^4.14.157"
+    lodash "^4.17.19"
 
 nwsapi@^2.0.7:
   version "2.2.0"

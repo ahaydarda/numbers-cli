@@ -15,15 +15,9 @@ test('outputs help', async () => {
   expect(output).toContain('0.0.1')
 })
 
-test('generates file', async () => {
-  const output = await cli('generate foo')
-
-  expect(output).toContain('Generated file at models/foo-model.ts')
-  const foomodel = filesystem.read('models/foo-model.ts')
-
-  expect(foomodel).toContain(`module.exports = {`)
-  expect(foomodel).toContain(`name: 'foo'`)
-
-  // cleanup artifact
-  filesystem.remove('models')
+test('to-words', async () => {
+  const inputPath  = filesystem.path(src, 'test.input.txt');
+  const output = await cli(` to-words --file=${inputPath}`);
+  expect(output).toContain(
+    "five hundred and thirty-six" );
 })
