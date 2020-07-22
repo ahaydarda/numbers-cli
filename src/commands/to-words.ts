@@ -1,6 +1,7 @@
 import { GluegunCommand } from 'gluegun';
 import { extractNumberInAText } from '../util/numericals'
 import { numbersToWords} from 'numbers-to-words-lib'
+import { NumberInvalid } from '../errors/number-invalid'
 
 const command: GluegunCommand = {
   name: 'to-words',
@@ -17,7 +18,11 @@ const command: GluegunCommand = {
           const numberInLine = extractNumberInAText(line);
           print.info(numbersToWords(numberInLine,language));
         } catch (error) {
-          print.info(error.message)
+          if(error instanceof  NumberInvalid) {
+            print.info(error.message)
+          } else{
+            throw error ;
+          }
         }
       });
     } else {

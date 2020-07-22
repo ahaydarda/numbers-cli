@@ -2725,10 +2725,10 @@ npm-run-path@^4.0.0:
   dependencies:
     path-key "^3.0.0"
 
-numbers-to-words-lib@^0.1.1s:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/numbers-to-words-lib/-/numbers-to-words-lib-0.1.1.tgz#2522e73f007c67ae90a4c720705650417e7a2c75"
-  integrity sha512-XNDvpDtYfN4HsY3V6g/2c3WxdfHXMgmcMk4sJJ3dSInJQMLGwiI8yvJTnjrdqVEtmAw3tcmMobpuFIUqJB9cyg==
+numbers-to-words-lib@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/numbers-to-words-lib/-/numbers-to-words-lib-0.1.2.tgz#f46a568584dc22fa862470542814c75dc8577111"
+  integrity sha512-9kLJIyjd3+B1mXgkrLFU8URTadg288gAHEI/qKEN4ZymrT6Gej3Xbrn/FNUEDo5kj+iolGq65rohnnp9CZ9j0A==
   dependencies:
     "@types/lodash" "^4.14.157"
     lodash "^4.17.19"

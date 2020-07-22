@@ -1,5 +1,5 @@
  import {toNumber} from 'lodash';
-
+ import {NumberInvalid} from '../errors/number-invalid'
 
  export function extractNumberInAText(text:string): number{
    const startOfNumericalValue  = /((^|\D)\s+|^)/;
@@ -11,7 +11,7 @@
    const values = fullPattern.exec(text);
 
    if(!values || values.length === 0){
-     throw Error("number invalid")
+     throw new NumberInvalid("number invalid")
    }
    const numberText = values[0];
    const removeFullStop = val=>(val.endsWith(".")? val.slice(0,-1): val);
